@@ -1,4 +1,4 @@
-defmodule DpdcTest do
+defmodule DPDCTest do
   use ExUnit.Case
-  doctest Dpdc
+  doctest DPDC
 end

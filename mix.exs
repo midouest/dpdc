@@ -1,4 +1,4 @@
-defmodule Dpdc.MixProject do
+defmodule DPDC.MixProject do
   use Mix.Project
 
   def project do

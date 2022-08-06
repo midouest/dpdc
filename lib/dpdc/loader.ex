@@ -1,4 +1,4 @@
-defmodule Dpdc.Loader do
+defmodule DPDC.Loader do
   defstruct [
     :bytes,
     :size_upvalues,
@@ -6,9 +6,9 @@ defmodule Dpdc.Loader do
   ]
 
   alias __MODULE__, as: Loader
-  alias Dpdc.Loader.Base, as: Base
-  alias Dpdc.Loader.Header, as: Header
-  alias Dpdc.Loader.Proto, as: Proto
+  alias DPDC.Loader.Base, as: Base
+  alias DPDC.Loader.Header, as: Header
+  alias DPDC.Loader.Proto, as: Proto
 
   def load(<<bytes::binary>>) do
     rest = Header.assert(bytes)

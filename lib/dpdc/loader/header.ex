@@ -1,4 +1,4 @@
-defmodule Dpdc.Loader.Header do
+defmodule DPDC.Loader.Header do
   def assert(<<bytes::binary>>) do
     bytes
     |> assert_signature

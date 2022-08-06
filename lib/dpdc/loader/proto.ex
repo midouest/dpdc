@@ -1,4 +1,4 @@
-defmodule Dpdc.Loader.Proto do
+defmodule DPDC.Loader.Proto do
   defstruct [
     :source,
     :lastdefined,
@@ -16,7 +16,7 @@ defmodule Dpdc.Loader.Proto do
   ]
 
   alias __MODULE__, as: Proto
-  alias Dpdc.Loader.Base
+  alias DPDC.Loader.Base
 
   def load(<<bytes::binary>>, psource \\ nil) do
     {source, rest} =

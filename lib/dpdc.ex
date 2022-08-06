@@ -1,2 +1,2 @@
-defmodule Dpdc do
+defmodule DPDC do
 end
