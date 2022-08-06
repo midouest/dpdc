@@ -29,7 +29,7 @@ defmodule DPDC.Loader.Base do
 
   def load_int(<<bytes::binary>>) do
     {n, rest} = load_unsigned(bytes, 2_147_483_647)
-    <<x::integer-signed>> = <<n>>
+    <<x::integer-signed-size(32)>> = <<n::integer-unsigned-size(32)>>
     {x, rest}
   end
 
