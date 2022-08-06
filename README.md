@@ -2,19 +2,16 @@
 
 Disassemble Playdate Lua bytecode
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `dpdc` to your list of dependencies in `mix.exs`:
+Use [pdz.py](https://github.com/jaames/playdate-reverse-engineering) to unpack `.luac` files from the `.pdz` file in the `.pdx` bundle.
+
+The disassembler can be used interactively by executing `iex -S mix` in a terminal:
 
 ```elixir
-def deps do
-  [
-    {:dpdc, "~> 0.1.0"}
-  ]
-end
-```
+iex(1)> {:ok, bytes} = File.read("path/to/some.luac")
+{:ok, <<...>>}
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/dpdc>.
+iex(2)> proto = DPDC.Loader.load(bytes)
+%DPDC.Loader.Proto{...}
+```
