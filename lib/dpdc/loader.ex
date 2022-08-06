@@ -3,8 +3,8 @@ defmodule DPDC.Loader do
   alias DPDC.Loader.Header, as: Header
   alias DPDC.Loader.Proto, as: Proto
 
-  def load(<<bytes::binary>>) do
-    rest = Header.assert(bytes)
+  def load!(<<bytes::binary>>) do
+    rest = Header.check!(bytes)
     {sizeupvalues, rest} = Base.load_byte(rest)
     {proto, rest} = Proto.load(rest)
 
