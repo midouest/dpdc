@@ -4,6 +4,8 @@ defmodule DPDC.Loader do
   alias DPDC.Loader.Proto, as: Proto
 
   def load!(<<bytes::binary>>) do
+    # See https://github.com/lua/lua/blob/v5.4-beta/lundump.c for loading the
+    # luac format used by pdc
     rest = Header.check!(bytes)
     {sizeupvalues, rest} = Base.load_byte(rest)
     {proto, rest} = Proto.load(rest)
