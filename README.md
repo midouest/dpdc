@@ -2,13 +2,18 @@
 
 Disassemble Playdate Lua bytecode
 
+## Build
+
+```shell
+$ mix escript.build
+```
+
 ## Usage
 
 Use [pdz.py](https://github.com/jaames/playdate-reverse-engineering) to unpack `.luac` files from the `.pdz` file in the `.pdx` bundle.
 
-The disassembler can be used interactively by executing `iex -S mix` in a terminal:
+Execute `dpdc` with the target `.luac` file as the only argument:
 
-```elixir
-iex(1)> proto = DPDC.Loader.load_file!("path/to/main.luac")
-%DPDC.Loader.Proto{...}
+```shell
+$ ./dpdc path/to/main.luac
 ```
