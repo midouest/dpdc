@@ -4,20 +4,23 @@ defmodule DPDC.CLI do
 
     case args do
       [path] ->
-        proto = DPDC.Loader.load_file!(path)
+        proto =
+          path
+          |> DPDC.Loader.load_file!()
+          |> DPDC.Disasm.load_proto!()
 
         IO.inspect(proto,
           limit: :infinity,
           pretty: true,
           syntax_colors: [
             atom: :cyan,
-            binary: :black,
+            binary: :white,
             boolean: :magenta,
-            list: :black,
-            map: :black,
+            list: :white,
+            map: :white,
             number: :yellow,
             string: :green,
-            tuple: :black
+            tuple: :white
           ]
         )
 

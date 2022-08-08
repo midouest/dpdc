@@ -18,6 +18,14 @@ defmodule DPDC.Loader.Proto do
   alias __MODULE__, as: Proto
   alias DPDC.Loader.Base
 
+  def update_code(%Proto{code: code} = proto, fun) do
+    %Proto{proto | code: fun.(code)}
+  end
+
+  def update_protos(%Proto{p: p} = proto, fun) do
+    %Proto{proto | p: Enum.map(p, fun)}
+  end
+
   def load(<<bytes::binary>>, psource \\ nil) do
     {source, rest} =
       case Base.load_string(bytes) do
