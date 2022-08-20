@@ -1,4 +1,4 @@
-defmodule DPDC.Loader.Header do
+defmodule DPDC.Load.Header do
   def check!(<<bytes::binary>>) do
     bytes
     |> check_signature!()

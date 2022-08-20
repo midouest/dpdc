@@ -1,6 +1,6 @@
 defmodule DPDC.Disassemble do
   alias DPDC.Disassemble.OpCode
-  alias DPDC.Loader.Proto
+  alias DPDC.Load.Proto
 
   def load_proto!(proto) do
     proto

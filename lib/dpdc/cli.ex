@@ -6,7 +6,7 @@ defmodule DPDC.CLI do
       [path] ->
         proto =
           path
-          |> DPDC.Loader.load_file!()
+          |> DPDC.Load.load_file!()
           |> DPDC.Disassemble.load_proto!()
 
         IO.inspect(proto,

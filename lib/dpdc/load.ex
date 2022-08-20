@@ -1,7 +1,7 @@
-defmodule DPDC.Loader do
-  alias DPDC.Loader.Base, as: Base
-  alias DPDC.Loader.Header, as: Header
-  alias DPDC.Loader.Proto, as: Proto
+defmodule DPDC.Load do
+  alias DPDC.Load.Base, as: Base
+  alias DPDC.Load.Header, as: Header
+  alias DPDC.Load.Proto, as: Proto
 
   def load_file!(path) do
     path

@@ -1,4 +1,4 @@
-defmodule DPDC.Loader.Base do
+defmodule DPDC.Load.Base do
   import Bitwise
 
   def load_string(<<bytes::binary>>) do

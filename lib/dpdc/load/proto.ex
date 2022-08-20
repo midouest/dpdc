@@ -1,4 +1,4 @@
-defmodule DPDC.Loader.Proto do
+defmodule DPDC.Load.Proto do
   defstruct [
     :source,
     :lastdefined,
@@ -16,7 +16,7 @@ defmodule DPDC.Loader.Proto do
   ]
 
   alias __MODULE__, as: Proto
-  alias DPDC.Loader.Base
+  alias DPDC.Load.Base
 
   def update_code(%Proto{code: code} = proto, fun) do
     %Proto{proto | code: fun.(code)}
