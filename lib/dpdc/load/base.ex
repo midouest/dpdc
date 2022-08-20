@@ -9,15 +9,13 @@ defmodule DPDC.Load.Base do
   def load_number(<<bytes::binary>>) do
     # assume numbers are 4 bytes as in header check
     {n, rest} = load_block(bytes, 4)
-    <<x::float-little-size(32)>> = n
-    {x, rest}
+    {DPDC.cast_luanum(n), rest}
   end
 
   def load_integer(<<bytes::binary>>) do
     # assume integers are 4 bytes as in header check
     {n, rest} = load_block(bytes, 4)
-    <<x::integer-signed-little-size(32)>> = n
-    {x, rest}
+    {DPDC.cast_luaint(n), rest}
   end
 
   def load_block(<<bytes::binary>>, n) do
