@@ -1,4 +1,4 @@
-defmodule DPDC.Disasm.ISJ do
+defmodule DPDC.Disassemble.ISJ do
   defstruct [:op, :sj]
 
   alias __MODULE__, as: ISJ

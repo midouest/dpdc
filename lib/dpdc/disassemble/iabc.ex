@@ -1,4 +1,4 @@
-defmodule DPDC.Disasm.IABC do
+defmodule DPDC.Disassemble.IABC do
   defstruct [:op, :a, :k, :b, :c]
 
   alias __MODULE__, as: IABC

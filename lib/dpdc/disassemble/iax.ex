@@ -1,4 +1,4 @@
-defmodule DPDC.Disasm.IAX do
+defmodule DPDC.Disassemble.IAX do
   defstruct [:op, :ax]
 
   alias __MODULE__, as: IAX

@@ -1,5 +1,5 @@
-defmodule DPDC.Disasm.OpCode do
-  alias DPDC.Disasm
+defmodule DPDC.Disassemble.OpCode do
+  alias DPDC.Disassemble
 
   @op_codes [
     :move,
@@ -170,11 +170,11 @@ defmodule DPDC.Disasm.OpCode do
   }
 
   @mode_funs %{
-    abc: &Disasm.IABC.load/2,
-    abx: &Disasm.IABX.load/2,
-    asbx: &Disasm.IASBX.load/2,
-    ax: &Disasm.IAX.load/2,
-    sj: &Disasm.ISJ.load/2
+    abc: &Disassemble.IABC.load/2,
+    abx: &Disassemble.IABX.load/2,
+    asbx: &Disassemble.IASBX.load/2,
+    ax: &Disassemble.IAX.load/2,
+    sj: &Disassemble.ISJ.load/2
   }
 
   def op_codes, do: @op_codes
