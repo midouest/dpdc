@@ -170,11 +170,11 @@ defmodule DPDC.Disassemble.OpCode do
   }
 
   @mode_funs %{
-    abc: &Disassemble.IABC.load/2,
-    abx: &Disassemble.IABX.load/2,
-    asbx: &Disassemble.IASBX.load/2,
-    ax: &Disassemble.IAX.load/2,
-    sj: &Disassemble.ISJ.load/2
+    abc: &Disassemble.OpMode.load_abc/2,
+    abx: &Disassemble.OpMode.load_abx/2,
+    asbx: &Disassemble.OpMode.load_asbx/2,
+    ax: &Disassemble.OpMode.load_ax/2,
+    sj: &Disassemble.OpMode.load_sj/2
   }
 
   def op_codes, do: @op_codes
