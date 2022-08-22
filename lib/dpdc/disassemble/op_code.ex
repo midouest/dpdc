@@ -82,7 +82,10 @@ defmodule DPDC.Disassemble.OpCode do
     :closure,
     :vararg,
     :varargprep,
-    :extraarg
+    :extraarg,
+    :loadfalse,
+    :lfalseskip,
+    :loadtrue
   ]
 
   @op_modes %{
@@ -166,7 +169,10 @@ defmodule DPDC.Disassemble.OpCode do
     closure: :abx,
     vararg: :abc,
     varargprep: :abc,
-    extraarg: :ax
+    extraarg: :ax,
+    loadfalse: :abc,
+    lfalseskip: :abc,
+    loadtrue: :abc
   }
 
   @mode_funs %{
