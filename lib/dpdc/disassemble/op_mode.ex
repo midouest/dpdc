@@ -7,7 +7,7 @@ defmodule DPDC.Disassemble.OpMode do
     %{op: op, a: a, bx: bx}
   end
 
-  @k_sbx trunc(Integer.pow(2, 17) / 2)
+  @k_sbx Integer.pow(2, 16) - 1
 
   def load_asbx(op, <<xk::17, a::8>>) do
     sbx = xk - @k_sbx
@@ -18,7 +18,7 @@ defmodule DPDC.Disassemble.OpMode do
     %{op: op, ax: ax}
   end
 
-  @k_sj trunc(Integer.pow(2, 25) / 2)
+  @k_sj Integer.pow(2, 24) - 1
 
   def load_sj(op, <<xk::25>>) do
     sj = xk - @k_sj
