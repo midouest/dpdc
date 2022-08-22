@@ -92,10 +92,10 @@ defmodule DPDC.Load.Proto do
     {constant, rest} =
       case t do
         0 ->
-          {:luanil, rest}
+          {nil, rest}
 
         1 ->
-          {:boolean, rest}
+          {false, rest}
 
         3 ->
           Base.load_integer(rest)
@@ -104,7 +104,7 @@ defmodule DPDC.Load.Proto do
           Base.load_string(rest)
 
         17 ->
-          {:absentkey, rest}
+          {true, rest}
 
         19 ->
           Base.load_number(rest)
