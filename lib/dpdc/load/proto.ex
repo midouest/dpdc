@@ -109,6 +109,9 @@ defmodule DPDC.Load.Proto do
         19 ->
           Base.load_number(rest)
 
+        20 ->
+          Base.load_string(rest)
+
         _ ->
           raise("Unrecognized constant type #{t}")
       end
