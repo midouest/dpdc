@@ -26,3 +26,5 @@ dpdc-*.tar
 /tmp/
 
 /dpdc
+
+/.elixir_ls
