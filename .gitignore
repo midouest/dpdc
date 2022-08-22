@@ -28,3 +28,7 @@ dpdc-*.tar
 /dpdc
 
 /.elixir_ls
+
+# Test input and output directories
+/in/
+/out/
