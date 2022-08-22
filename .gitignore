@@ -25,6 +25,7 @@ dpdc-*.tar
 # Temporary files, for example, from tests.
 /tmp/
 
+# Compiled dpdc binary
 /dpdc
 
 /.elixir_ls
